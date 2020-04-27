@@ -4,29 +4,42 @@
         <title>TUI.CSS examples</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/latest/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/base.css">
         <link rel="stylesheet" type="text/css" href="css/themes/default.css">
+
+        <script src="js/tui.js"></script>
     </head>
     <body>
-        <p>Hello world.</p>
-        
-        <button class="tui-button">A button</button>
-        <button class="tui-button tui-alternative">Alternative button</button>
-        
-        <hr class="tui-hline"/>
-        
         <nav class="tui-menu">
             <a class="tui-item" href="#">Item</a>
             <a class="tui-item" href="#">Item</a>
             <a class="tui-item" href="#">Item</a>
             <a class="tui-item" href="#">Item</a>
             <button class="tui-item">Item</button>
+            <div class="tui-item">
+                <span class="tui-dropdown">
+                    <button class="" onclick="tui.dropdown.toggle(this)">Dropdown &#9660;</button>
+                    <div style="display: none">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                        <a href="#">Link 4</a>
+                    </div>
+                </span>
+            </div>
         </nav>
-        
+
         <hr class="tui-hline"/>
-        
+
+        <p>Hello world.</p>
+
+        <button class="tui-button">A button</button>
+        <button class="tui-button tui-alternative">Alternative button</button>
+
+        <hr class="tui-hline"/>
+
         <div class="tui-hbox">
             <div class="tui-vbox" style="width: 30%; border: thin solid white">
                 <span>Este texto deve aparecer emplhado.</span>
@@ -38,25 +51,166 @@
                 <p>Este texto deve aparecer ao lado direito do texto empilhado.</p>
             </div>
         </div>
-        
+
         <hr class="tui-hline"/>
-        
+
         <div class="tui-tbox">
             <div class="tui-row">
-                <div class="tui-col">R1xC1</div>
-                <div class="tui-col">R1xC2</div>
-                <div class="tui-col">R1xC3</div>
+                <div class="tui-col" style="border: thin solid white">R1xC1</div>
+                <div class="tui-col" style="border: thin solid white">R1xC2</div>
+                <div class="tui-col" style="border: thin solid white">R1xC3</div>
             </div>
             <div class="tui-row">
-                <div class="tui-col">R2xC1</div>
-                <div class="tui-col">R2xC2</div>
-                <div class="tui-col">R2xC3</div>
+                <div class="tui-col" style="border: thin solid white">R2xC1</div>
+                <div class="tui-col" style="border: thin solid white">R2xC2</div>
+                <div class="tui-col" style="border: thin solid white">R2xC3</div>
             </div>
             <div class="tui-row">
-                <div class="tui-col">R3xC1</div>
-                <div class="tui-col">R3xC2</div>
-                <div class="tui-col">R3xC3</div>
+                <div class="tui-col" style="border: thin solid white">R3xC1</div>
+                <div class="tui-col" style="border: thin solid white">R3xC2</div>
+                <div class="tui-col" style="border: thin solid white">R3xC3</div>
             </div>
         </div>
+
+        <hr class="tui-hline"/>
+
+        <table class="tui-table">
+            <caption>Tabela</caption>
+            <thead>
+                <tr>
+                    <th>Col 1</th>
+                    <th>Col 2</th>
+                    <th>Col 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cell 1-1</td>
+                    <td>Cell 1-2</td>
+                    <td>Cell 1-3</td>
+                </tr>
+                <tr>
+                    <td>Cell 2-1</td>
+                    <td>Cell 2-2</td>
+                    <td>Cell 2-3</td>
+                </tr>
+                <tr>
+                    <td>Cell 3-1</td>
+                    <td>Cell 3-2</td>
+                    <td>Cell 3-3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Total</th>
+                    <th>3</th>
+                    <th>3</th>
+                </tr>
+            </tfoot>
+        </table>
+
+        <hr class="tui-hline"/>
+
+        <table class="tui-table tui-stripped">
+            <caption>Tabela</caption>
+            <thead>
+                <tr>
+                    <th>Col 1</th>
+                    <th>Col 2</th>
+                    <th>Col 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cell 1-1</td>
+                    <td>Cell 1-2</td>
+                    <td>Cell 1-3</td>
+                </tr>
+                <tr>
+                    <td>Cell 2-1</td>
+                    <td>Cell 2-2</td>
+                    <td>Cell 2-3</td>
+                </tr>
+                <tr>
+                    <td>Cell 3-1</td>
+                    <td>Cell 3-2</td>
+                    <td>Cell 3-3</td>
+                </tr>
+                <tr>
+                    <td>Cell 4-1</td>
+                    <td>Cell 4-2</td>
+                    <td>Cell 4-3</td>
+                </tr>
+                <tr>
+                    <td>Cell 5-1</td>
+                    <td>Cell 5-2</td>
+                    <td>Cell 5-3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Total</th>
+                    <th>3</th>
+                    <th>3</th>
+                </tr>
+            </tfoot>
+        </table>
+
+        <hr class="tui-hline"/>
+
+        <article class="tui-panel">
+            <header class="tui-title">My Panel</header>
+            <section class="tui-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id ex nulla. Suspendisse commodo consequat diam et eleifend. Donec ex dolor, tempor sed mattis rutrum, accumsan non urna. Nullam at arcu non augue viverra aliquet vehicula sed justo. Suspendisse ornare in ligula sit amet blandit. Pellentesque quis erat tellus. Sed viverra metus eu consectetur lobortis. Nam eget viverra elit, pharetra ornare justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In mauris mauris, imperdiet quis metus eget, vehicula venenatis ipsum. Suspendisse potenti. Nulla rhoncus placerat elit eget porta. </p>
+                <p>In hac habitasse platea dictumst. Vivamus eu lacinia ipsum, ut elementum neque. Mauris sagittis massa vel leo bibendum porttitor. Sed dui ante, interdum rutrum consectetur suscipit, ultricies nec quam. Sed in magna odio. Fusce sodales mauris eget varius faucibus. Nam fermentum erat nec sem accumsan, ut finibus urna eleifend. Maecenas ac pharetra neque. Sed consectetur enim a ante pretium varius.</p>
+                <p>Nunc nec pharetra turpis. Nulla quis augue urna. Duis ac congue lectus. Proin dapibus augue in sapien feugiat commodo a in mi. Suspendisse orci diam, interdum at porttitor non, viverra at augue. Maecenas at aliquam diam, vel lobortis ante. Curabitur et leo libero.</p>
+            </section>
+            <footer class="tui-footer">The footer of the panel...</footer>
+        </article>
+
+        <hr class="tui-hline"/>
+
+        <fieldset class="tui-group">
+            <legend>My group</legend>
+            <div>
+                <input type="radio"> <label>Option 1</label>
+            </div>
+            <div>
+                <input type="radio"> <label>Option 2</label>
+            </div>
+            <div>
+                <input type="radio"> <label>Option 3</label>
+            </div>
+        </fieldset>
+
+        <hr class="tui-hline"/>
+
+        <div class="tui-tabpanel">
+            <div class="tui-header">
+                <button class="tui-active" onclick="tui.tabpanel.toggle(event, 'london')">London</button>
+                <button onclick="tui.tabpanel.toggle(event, 'paris')">Paris</button>
+                <button onclick="tui.tabpanel.toggle(event, 'tokyo')">Tokyo</button>
+            </div>
+            <div class="tui-tabs">
+                <div id="london" class="tui-active">
+                    <h3>London</h3>
+                    <p>London is the capital city of England.</p>
+                </div>
+                <div id="paris">
+                    <h3>Paris</h3>
+                    <p>Paris is the capital of France.</p>
+                </div>
+                <div id="tokyo">
+                    <h3>Tokyo</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id ex nulla. Suspendisse commodo consequat diam et eleifend. Donec ex dolor, tempor sed mattis rutrum, accumsan non urna. Nullam at arcu non augue viverra aliquet vehicula sed justo. Suspendisse ornare in ligula sit amet blandit. Pellentesque quis erat tellus. Sed viverra metus eu consectetur lobortis. Nam eget viverra elit, pharetra ornare justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In mauris mauris, imperdiet quis metus eget, vehicula venenatis ipsum. Suspendisse potenti. Nulla rhoncus placerat elit eget porta. </p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="tui-hline"/>
+
+        <hr class="tui-hline"/>
+
     </body>
 </html>

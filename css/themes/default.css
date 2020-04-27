@@ -43,3 +43,85 @@ body {
 .tui-hline {
     color: var(--fg-color);
 }
+
+.tui-table {
+    border-color: var(--fg-color);
+}
+
+.tui-table>caption {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--fg-color);
+}
+
+.tui-table>thead, .tui-table>tfoot {
+    color: var(--bg-color);
+    background-color: var(--fg-color);
+}
+
+.tui-table>tbody>tr>td {
+    border-color: var(--fg-color);
+}
+
+.tui-table.tui-stripped>tbody>tr:nth-child(even) {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.tui-panel {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.tui-panel>.tui-title {
+    background-color: var(--fg-color);
+    color: var(--bg-color);
+}
+
+.tui-panel>.tui-content {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.tui-panel>.tui-footer {
+    background-color: var(--fg-color);
+    color: var(--bg-color);
+}
+
+.tui-group {
+    border-color: var(--fg-color);
+}
+
+.tui-tabpanel>.tui-header {
+    background-color: var(--bg-color);
+    border-color: var(--fg-color);
+}
+
+.tui-tabpanel>.tui-header>button {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-right-color: var(--fg-color);
+}
+
+.tui-tabpanel>.tui-header>button.tui-active {
+    background-color: var(--fg-color);
+}
+
+.tui-tabpanel>.tui-tabs>div {
+    border-color: var(--fg-color);
+}
+
+.tui-dropdown>button {
+    background-color: var(--fg-color);
+    color: var(--text-color);
+    font-weight: bold;
+}
+.tui-dropdown>div {
+    background-color: var(--fg-color);
+    border-color: var(--fg-color);
+    box-shadow: 0.1em 0.1em 0em 0.1em var(--text-color);
+}
+.tui-dropdown>div>*  {
+    text-decoration: none;
+    color: var(--text-color);
+}
