@@ -1,0 +1,45 @@
+/* 
+    Created on : 27/04/2020, 08:50:19
+    Author     : everton
+*/
+
+:root {
+    --bg-color: #20111B;
+    --text-color: #CEDDDA;
+    --fg-color: #426A79;
+    --positive-color: #2A3931;
+    --negative-color: #57111A;
+    --warn-color: #9C7536;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: monospace;
+    font-size: 1em;
+}
+
+.tui-button {
+    background-color: var(--fg-color);
+    border-color: var(--fg-color);
+    color: var(--text-color);
+}
+
+.tui-alternative {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.tui-menu {
+    background-color: var(--fg-color);
+    color: var(--text-color);
+    border-color: var(--fg-color);
+}
+
+.tui-menu>.tui-item {
+    color: var(--text-color);
+}
+
+.tui-hline {
+    color: var(--fg-color);
+}
