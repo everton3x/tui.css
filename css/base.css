@@ -177,3 +177,16 @@ body {
 .tui-dropdown>div>*  {
     display: block;
 }
+
+.tui-sidebar {
+    float: left;
+    border-style: solid;
+    border-width: var(--border-width);   
+    padding: 0.2em 0.2em 0.2em 0.2em;
+    margin: 1em 1em 1em 1em;
+}
+
+.tui-sidebar>.tui-item {
+    display: block;
+    text-decoration: none;
+}
