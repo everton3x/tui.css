@@ -11,7 +11,7 @@
     --negative-color: #57111A;
     --warn-color: #9C7536;
     --border-width: 0.1em;
-    --border-style: solid;
+    --border-style: var(--border-style);
 }
 
 body {
@@ -41,7 +41,7 @@ body {
 }
 
 .tui-menu {
-    border-style: solid;
+    border-style: var(--border-style);
     border-width: var(--border-width);
     height: 2.5em;
     line-height: 2.5em;
@@ -71,7 +71,7 @@ body {
 
 .tui-table {
     border-color: var(--fg-color);
-    border-style: solid;
+    border-style: var(--border-style);
     border-width: var(--border-width);
     border-collapse: collapse;
 }
@@ -82,7 +82,7 @@ body {
     border-color: var(--fg-color);
     font-weight: bold;
     text-align: center;
-    border-style: solid;
+    border-style: var(--border-style);
     border-width: var(--border-width);
 }
 
@@ -93,7 +93,7 @@ body {
 
 .tui-table>tbody>tr>td {
     border-color: var(--fg-color);
-    border-style: solid;
+    border-style: var(--border-style);
     border-width: var(--border-width);
 }
 
@@ -105,7 +105,7 @@ body {
 .tui-panel {
     background-color: var(--bg-color);
     color: var(--text-color);
-    border-style: solid;
+    border-style: var(--border-style);
     border-width: var(--border-width);
     margin: 0.2em 0.2em 0.2em 0.2em;
 }
@@ -159,7 +159,7 @@ body {
 
 .tui-group {
     border-color: var(--fg-color);
-    border-style: solid;
+    border-style: var(--border-style);
     border-width: var(--border-width);
 }
 
@@ -167,7 +167,7 @@ body {
     background-color: var(--bg-color);
     border-color: var(--fg-color);
     overflow: hidden;
-    border-style: solid;
+    border-style: var(--border-style);
     border-width: var(--border-width);
 }
 
@@ -193,7 +193,7 @@ body {
 .tui-tabpanel>.tui-tabs>div {
     border-color: var(--fg-color);
     display: none;
-    border-style: solid;
+    border-style: var(--border-style);
     border-width: var(--border-width);
     padding: 0.2em 0.2em 0.2em 0.2em;
     border-top: none;
@@ -226,7 +226,7 @@ body {
     display: none;
     position: absolute;
     z-index: 1;
-    border-style: solid;
+    border-style: var(--border-style);
     border-width: var(--border-width);
     padding: 0.2em 0.2em 0.2em 0.2em;
     min-width: 6em;
@@ -241,7 +241,7 @@ body {
     border-color: var(--fg-color);
     box-shadow: 0.1em 0.1em 0em 0.1em var(--text-color);
     float: left;
-    border-style: solid;
+    border-style: var(--border-style);
     border-width: var(--border-width);   
     padding: 0.2em 0.2em 0.2em 0.2em;
     margin: 1em 1em 1em 1em;
