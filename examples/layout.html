@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TUI.CSS layouts examples</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../css/default.css">
+
+        <style>
+            .box {
+                border: solid thin white;
+                height: 100px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>This boxes are horizontally organized.</p>
+        <div class="tui-hbox">
+            <div class="box">Top-Left</div>
+            <div class="box">Top-Right</div>
+            <div class="box">Bottom-Left</div>
+            <div class="box">Bottom-Right</div>
+        </div>
+
+        <hr class="tui-hline">
+
+        <p>This boxes are vertically organized.</p>
+        <div class="tui-vbox">
+            <span class="box">Top-Left</span>
+            <span class="box">Top-Right</span>
+            <span class="box">Bottom-Left</span>
+            <span class="box">Bottom-Right</span>
+        </div>
+
+        <hr class="tui-hline">
+
+        <p>This boxes are tabled organized.</p>
+        <div class="tui-tbox">
+            <div class="tui-row">
+                <div class="tui-col box">R1xC1</div>
+                <div class="tui-col box">R1xC2</div>
+                <div class="tui-col box">R1xC3</div>
+            </div>
+            <div class="tui-row">
+                <div class="tui-col box">R2xC1</div>
+                <div class="tui-col box">R2xC2</div>
+                <div class="tui-col box">R2xC3</div>
+            </div>
+            <div class="tui-row">
+                <div class="tui-col box">R3xC1</div>
+                <div class="tui-col box">R3xC2</div>
+                <div class="tui-col box">R3xC3</div>
+            </div>
+        </div>
+
+    </body>
+</html>
