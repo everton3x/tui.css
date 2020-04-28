@@ -1,24 +1,43 @@
 /* 
-    Created on : 27/04/2020, 08:46:24
+    Created on : 27/04/2020, 08:50:19
     Author     : everton
 */
 
 :root {
+    --bg-color: #20111B;
+    --text-color: #CEDDDA;
+    --fg-color: #426A79;
+    --positive-color: #2A3931;
+    --negative-color: #57111A;
+    --warn-color: #9C7536;
     --border-width: 0.1em;
+    --border-style: solid;
 }
 
 body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: monospace;
+    font-size: 1em;
     margin: 0 0 0 0;
     padding: 0.5em 1em 1em 1em;
 }
 
 .tui-button {
-    border-style: solid;
+    background-color: var(--fg-color);
+    border-color: var(--fg-color);
+    color: var(--text-color);
+    border-style: var(--border-style);
     border-width: var(--border-width);
     height: 2.5em;
     min-width: 6em;
     font-weight: bold;
     cursor: default;
+}
+
+.tui-alternative {
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .tui-menu {
@@ -29,9 +48,13 @@ body {
     padding: 0;
     padding-left: 0.5em;
     margin: 0;
+    background-color: var(--fg-color);
+    color: var(--text-color);
+    border-color: var(--fg-color);
 }
 
 .tui-menu>.tui-item {
+    color: var(--text-color);
     text-decoration: none;
     margin: 0.2em 0.2em 0.2em 0.2em;
     padding: 0;
@@ -43,7 +66,71 @@ body {
 }
 
 .tui-hline {
-    
+    color: var(--fg-color);
+}
+
+.tui-table {
+    border-color: var(--fg-color);
+    border-style: solid;
+    border-width: var(--border-width);
+    border-collapse: collapse;
+}
+
+.tui-table>caption {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--fg-color);
+    font-weight: bold;
+    text-align: center;
+    border-style: solid;
+    border-width: var(--border-width);
+}
+
+.tui-table>thead, .tui-table>tfoot {
+    color: var(--bg-color);
+    background-color: var(--fg-color);
+}
+
+.tui-table>tbody>tr>td {
+    border-color: var(--fg-color);
+    border-style: solid;
+    border-width: var(--border-width);
+}
+
+.tui-table.tui-stripped>tbody>tr:nth-child(even) {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.tui-panel {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-style: solid;
+    border-width: var(--border-width);
+    margin: 0.2em 0.2em 0.2em 0.2em;
+}
+
+.tui-panel>.tui-title {
+    background-color: var(--fg-color);
+    color: var(--bg-color);
+    font-weight: bold;
+    text-align: left;
+    padding: 0.2em 0.2em 0.2em 0.2em;
+    margin: 0;
+}
+
+.tui-panel>.tui-content {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0.2em 0.2em 0.2em 0.2em;
+}
+
+.tui-panel>.tui-footer {
+    background-color: var(--fg-color);
+    color: var(--bg-color);
+    padding: 0.2em 0.2em 0.2em 0.2em;
+    margin: 0;
 }
 
 .tui-hbox, .tui-vbox {
@@ -70,63 +157,24 @@ body {
     display: table-cell;
 }
 
-.tui-table {
-    border-style: solid;
-    border-width: var(--border-width);
-    border-collapse: collapse;
-}
-
-.tui-table>caption {
-    font-weight: bold;
-    text-align: center;
-    border-style: solid;
-    border-width: var(--border-width);
-}
-
-.tui-table>thead, .tui-table>tfoot {
-    
-}
-
-.tui-table>tbody>tr>td {
-    border-style: solid;
-    border-width: var(--border-width);
-}
-
-.tui-panel {
-    border-style: solid;
-    border-width: var(--border-width);
-    margin: 0.2em 0.2em 0.2em 0.2em;
-}
-
-.tui-panel>.tui-title {
-    font-weight: bold;
-    text-align: left;
-    padding: 0.2em 0.2em 0.2em 0.2em;
-    margin: 0;
-}
-
-.tui-panel>.tui-content {
-    margin: 0;
-    padding: 0.2em 0.2em 0.2em 0.2em;
-}
-
-.tui-panel>.tui-footer {
-    padding: 0.2em 0.2em 0.2em 0.2em;
-    margin: 0;
-}
-
 .tui-group {
+    border-color: var(--fg-color);
     border-style: solid;
     border-width: var(--border-width);
 }
 
 .tui-tabpanel>.tui-header {
+    background-color: var(--bg-color);
+    border-color: var(--fg-color);
     overflow: hidden;
     border-style: solid;
     border-width: var(--border-width);
 }
 
 .tui-tabpanel>.tui-header>button {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-right-color: var(--fg-color);
     float: left;
     border: none;
     outline: none;
@@ -138,7 +186,12 @@ body {
     min-width: 6em;
 }
 
+.tui-tabpanel>.tui-header>button.tui-active {
+    background-color: var(--fg-color);
+}
+
 .tui-tabpanel>.tui-tabs>div {
+    border-color: var(--fg-color);
     display: none;
     border-style: solid;
     border-width: var(--border-width);
@@ -156,6 +209,9 @@ body {
 }
 
 .tui-dropdown>button {
+    background-color: var(--fg-color);
+    color: var(--text-color);
+    font-weight: bold;
     margin: 0.2em 0.2em 0.2em 0.2em;
     padding: 0;
     font-weight: bold;
@@ -163,8 +219,10 @@ body {
     border: none;
     cursor: default;
 }
-
 .tui-dropdown>div {
+    background-color: var(--fg-color);
+    border-color: var(--fg-color);
+    box-shadow: 0.1em 0.1em 0em 0.1em var(--text-color);
     display: none;
     position: absolute;
     z-index: 1;
@@ -173,12 +231,15 @@ body {
     padding: 0.2em 0.2em 0.2em 0.2em;
     min-width: 6em;
 }
-
 .tui-dropdown>div>*  {
+    text-decoration: none;
+    color: var(--text-color);
     display: block;
 }
 
 .tui-sidebar {
+    border-color: var(--fg-color);
+    box-shadow: 0.1em 0.1em 0em 0.1em var(--text-color);
     float: left;
     border-style: solid;
     border-width: var(--border-width);   
@@ -187,6 +248,16 @@ body {
 }
 
 .tui-sidebar>.tui-item {
+    color: var(--text-color);
+    font-weight: bold;
     display: block;
     text-decoration: none;
+}
+
+.tui-left {
+    float: left;
+}
+
+.tui-right {
+    float: right;
 }
