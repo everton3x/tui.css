@@ -351,3 +351,27 @@ body {
     text-decoration: none;
     color: var(--text-color);
 }
+
+.panel {
+    
+}
+
+.panel > .labels {
+    
+}
+
+.panel > .labels > label {
+    
+}
+
+.panel > .control {
+    display: none;
+}
+
+.panel > .control:checked + .content {
+    display: block;
+}
+
+.panel > .content {
+    display: none;
+}
