@@ -300,6 +300,7 @@ body {
     margin: 0;
     position: relative;
     display: inline-block;
+    background-color: var(--fg-color);
 }
 
 .tui-dropdown>input {
@@ -308,7 +309,6 @@ body {
 }
 
 .tui-dropdown>label {
-    background-color: var(--fg-color);
     border-color: var(--fg-color);
     color: var(--text-color);
     border-style: var(--border-style);
