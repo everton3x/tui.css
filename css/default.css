@@ -340,6 +340,7 @@ body {
     position: absolute;
     z-index: 1;
     box-sizing: border-box;
+    box-shadow: 0.1em 0.1em 0em 0.1em var(--text-color);
 }
 
 .tui-dropdown>input:checked ~ div {
