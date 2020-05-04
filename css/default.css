@@ -352,12 +352,10 @@ body {
     color: var(--text-color);
 }
 
-.tui-tabpanel {
-    position: relative;
+/*.tui-tabpanel {
     border-color: var(--fg-color);
     border-style: var(--border-style);
     border-width: var(--border-width);
-    box-sizing: border-box;
 }
 
 .tui-tabpanel>.tui-control {
@@ -366,29 +364,63 @@ body {
 
 .tui-tabpanel>.tui-label {
     display: inline-block;
-    clear: none;
     padding: 0.2em;
-    border-color: var(--fg-color);
-    border-style: var(--border-style);
-    border-width: var(--border-width);
+    border-right-color: var(--fg-color);
+    border-right-style: var(--border-style);
+    border-right-width: var(--border-width);
     margin: 0;
-}
-
-.tui-tabpanel>.tui-control:checked + .tui-label {
-    background-color: var(--fg-color);
+    line-height: 2.5em;
+    text-align: center;
+    min-width: 6em;
 }
 
 .tui-tabpanel>.tui-content {
     display: none;
-    /*position: absolute;*/
-    float: left;
+    border-top-color: var(--fg-color);
+    border-top-style: var(--border-style);
+    border-top-width: var(--border-width);
+    margin: 0;
+}
+
+.tui-tabpanel>.tui-control:checked + .tui-content {
+    display: block;
+}*/
+
+.tui-tabpanel {
     border-color: var(--fg-color);
     border-style: var(--border-style);
     border-width: var(--border-width);
-    box-sizing: border-box;
+    display: table;
+}
+
+.tui-tabpanel>.tui-control {
+    display: none;
+}
+
+.tui-tabpanel>.tui-label {
+    padding: 0.2em;
+    border-right-color: var(--fg-color);
+    border-right-style: var(--border-style);
+    border-right-width: var(--border-width);
+    margin: 0;
+    line-height: 2.5em;
+    text-align: center;
+    min-width: 6em;
+    display: inline-block;
+}
+
+.tui-tabpanel>.tui-content {
+    display: none;
+    border-top-color: var(--fg-color);
+    border-top-style: var(--border-style);
+    border-top-width: var(--border-width);
     margin: 0;
 }
 
 .tui-tabpanel>.tui-control:checked + .tui-label + .tui-content {
     display: block;
+}
+
+.tui-tabpanel>.tui-control:checked + .tui-label {
+    background-color: var(--fg-color);
 }
