@@ -10,21 +10,30 @@
     </head>
     <body>
 
-        <div class="panel">
-            <div class="labels">
-                <label for="t1">Tab 1</label>
-                <label for="t2">Tab 2</label>
-                <label for="t3">Tab 3</label>
+        <div id="wrap" style="height: 50%; width: 50%; border: red solid 0.3em">
+            <div class="tui-tabpanel">
+                <input id="t1" name="control" class="tui-control" type="radio" checked="">
+                <label for="t1" class="tui-label">Tab 1</label>
+                <div class="tui-content">
+                    <h3>Tab One</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id ex nulla. Suspendisse commodo consequat diam et eleifend. Donec ex dolor, tempor sed mattis rutrum, accumsan non urna. Nullam at arcu non augue viverra aliquet vehicula sed justo. Suspendisse ornare in ligula sit amet blandit. Pellentesque quis erat tellus. Sed viverra metus eu consectetur lobortis. Nam eget viverra elit, pharetra ornare justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In mauris mauris, imperdiet quis metus eget, vehicula venenatis ipsum. Suspendisse potenti. Nulla rhoncus placerat elit eget porta. </p>
+                </div>
+
+                <input id="t2" name="control" class="tui-control" type="radio">
+                <label for="t2" class="tui-label">Tab 2</label>
+                <div class="tui-content">
+                    <h3>Tab Two</h3>
+                    <p>In hac habitasse platea dictumst. Vivamus eu lacinia ipsum, ut elementum neque. Mauris sagittis massa vel leo bibendum porttitor. Sed dui ante, interdum rutrum consectetur suscipit, ultricies nec quam. Sed in magna odio. Fusce sodales mauris eget varius faucibus. Nam fermentum erat nec sem accumsan, ut finibus urna eleifend. Maecenas ac pharetra neque. Sed consectetur enim a ante pretium varius.</p>
+                </div>
+
+                <input id="t3" name="control" class="tui-control" type="radio">
+                <label for="t3" class="tui-label">Tab 3</label>
+                <div class="tui-content">
+                    <h3>Tab three</h3>
+                    <p>Nunc nec pharetra turpis. Nulla quis augue urna. Duis ac congue lectus. Proin dapibus augue in sapien feugiat commodo a in mi. Suspendisse orci diam, interdum at porttitor non, viverra at augue. Maecenas at aliquam diam, vel lobortis ante. Curabitur et leo libero.</p>
+                </div>
+                <p>This is a tab panel only CSS.</p>
             </div>
-            
-            <input type="radio" name="control" id="t1" class="control" checked>
-            <div class="content">Tab one</div>
-            
-            <input type="radio" name="control" id="t2" class="control">
-            <div class="content">Tab two</div>
-            
-            <input type="radio" name="control" id="t3" class="control">
-            <div class="content">Tab three</div>
         </div>
     </body>
 </html>
