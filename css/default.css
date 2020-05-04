@@ -390,7 +390,7 @@ body {
     border-color: var(--fg-color);
     border-style: var(--border-style);
     border-width: var(--border-width);
-    display: table;
+    height: 100%;
 }
 
 .tui-tabpanel>.tui-control {
@@ -415,6 +415,9 @@ body {
     border-top-style: var(--border-style);
     border-top-width: var(--border-width);
     margin: 0;
+    float: left;
+    padding: 0.5em;
+    overflow-y: auto;
 }
 
 .tui-tabpanel>.tui-control:checked + .tui-label + .tui-content {
@@ -423,4 +426,10 @@ body {
 
 .tui-tabpanel>.tui-control:checked + .tui-label {
     background-color: var(--fg-color);
+}
+
+.tui-tabpanel:after {
+    content: "";
+    display: block;
+    clear: both;
 }
