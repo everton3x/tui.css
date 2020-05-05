@@ -352,40 +352,6 @@ body {
     color: var(--text-color);
 }
 
-/*.tui-tabpanel {
-    border-color: var(--fg-color);
-    border-style: var(--border-style);
-    border-width: var(--border-width);
-}
-
-.tui-tabpanel>.tui-control {
-    display: none;
-}
-
-.tui-tabpanel>.tui-label {
-    display: inline-block;
-    padding: 0.2em;
-    border-right-color: var(--fg-color);
-    border-right-style: var(--border-style);
-    border-right-width: var(--border-width);
-    margin: 0;
-    line-height: 2.5em;
-    text-align: center;
-    min-width: 6em;
-}
-
-.tui-tabpanel>.tui-content {
-    display: none;
-    border-top-color: var(--fg-color);
-    border-top-style: var(--border-style);
-    border-top-width: var(--border-width);
-    margin: 0;
-}
-
-.tui-tabpanel>.tui-control:checked + .tui-content {
-    display: block;
-}*/
-
 .tui-tabpanel {
     border-color: var(--fg-color);
     border-style: var(--border-style);
@@ -432,4 +398,73 @@ body {
     content: "";
     display: block;
     clear: both;
+}
+
+.tui-form {
+    border-style: var(--border-style);
+    border-width: var(--border-width);
+    border-color: var(--fg-color);
+    box-shadow: 0.1em 0.1em 0em 0.1em var(--text-color);
+}
+
+.tui-form>.tui-title {
+    background-color: var(--fg-color);
+    color: var(--text-color);
+    font-weight: bold;
+    text-align: left;
+    padding: 0.2em 0.2em 0.2em 0.2em;
+    margin: 0;
+}
+
+.tui-form>.tui-wrap {
+    display: table;
+    border-spacing: 0.5em;
+}
+
+
+.tui-form .tui-field {
+    display: table-row;
+    
+}
+
+.tui-form .tui-field>.tui-label {
+    min-width: 6em;
+    margin-right: 0.3em;
+    display: table-cell;
+}
+
+.tui-form .tui-field>.tui-label:after {
+    content: ":";
+}
+
+.tui-form .tui-field>.tui-entry {
+    display: table-cell;
+    background-color: var(--fg-color);
+    border: none;
+}
+
+.tui-form .tui-field>.tui-text,
+.tui-form .tui-field>.tui-password {
+    
+}
+
+.tui-form .tui-field>.tui-number {
+    
+}
+
+/*.tui-form .tui-field>.tui-number::-webkit-inner-spin-button,
+.tui-form .tui-field>.tui-number::-webkit-outer-spin-button,
+.tui-form .tui-field>.tui-number::-moz-number-spin-box,
+.tui-form .tui-field>.tui-number::-moz-number-spin-up,
+.tui-form .tui-field>.tui-number::-moz-number-spin-down
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}*/
+
+@-moz-document url-prefix() {
+    input[type=number] {
+        border: red solid 0.5em;
+    }
 }
